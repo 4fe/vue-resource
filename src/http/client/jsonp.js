@@ -44,6 +44,7 @@ export default function (request) {
         script = document.createElement('script');
         script.src = request.getUrl();
         script.type = 'text/javascript';
+        script.charset = request.jsonpCharset || '';
         script.async = true;
         script.onload = handler;
         script.onerror = handler;
